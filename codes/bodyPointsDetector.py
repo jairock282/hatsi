@@ -4,7 +4,7 @@
    | |                                                                                                                | |
    | |                                         bodyPointsDetector Module                                              | |
    | |                                                                                                                | |
-   | | Gets de x,y,z of each keypoint in two modes:                                                                   | |
+   | | Gets the x,y,z of each keypoint in two modes:                                                                   | |
    | | getPointsCoordsXYZ -> obtains the x and y coordinates in pixels and Z in meters with respect the camera        | |
    | |                                                                                                                | |
    | | getRealWorldCoordsXYZ -> obtains the X and Y coordinates in meters with respect the center point of the image  | |
