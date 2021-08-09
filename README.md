@@ -4,7 +4,7 @@
 
 ---
 ### Automatic Medical Translator | Mexican Sign Language - Spanish
-![alt text](https://github.com/jairock282/hatsi/blob/develop/img_readme/modelDemo.jpg)
+![alt text](https://github.com/jairock282/hatsi/blob/develop/img_readme/modelDemo.gif)
 
 
 ## Marcas del rostro <br>![alt text](https://github.com/jairock282/hatsi/blob/develop/img_readme/rostro.jpg)
