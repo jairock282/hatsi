@@ -34,7 +34,7 @@ There are multiple code files:
 `python3 realTimeDemo.py`
 
 ---
-### Landmarks Diagrams
+### Landmarks Diagrams :dart:
 #### Face landmarks <br><img src="./img_readme/rostro.jpg" width="500" height="500" style="display:block; margin: 0 auto;">
 #### Body landmarks <br><img src="./img_readme/cuerpo.jpeg" width="500" height="500" style="display:block; margin: 0 auto;">
 #### Hands landmarks <br><img src="./img_readme/mano.png" width="500" height="500" style="display:block; margin: 0 auto;">
