@@ -2,7 +2,7 @@
  __| |_____________________________________________________________________________________| |__
 (__   _____________________________________________________________________________________   __)
    | |                                                                                     | |
-   | |                                        oakD Module                                  | |
+   | |                                     oakD Module                                     | |
    | |                                                                                     | |
    | | The class oakD() creates an oakD object with all the neccesary camera configuration | |
    | | to use in any other different module.                                               | |
