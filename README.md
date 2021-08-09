@@ -3,7 +3,7 @@
 <img src="./img_readme/opencv_finalist.jpg" width="600" height="700" style="display:block; margin: 0 auto;">
 
 ---
-### Automatic Medical Translator :syringe: | Mexican Sign Language - Spanish
+### Automatic Medical Translator :syringe: | Mexican Sign Language - Spanish :mexico:
 
 <p style="text-align: justify;">
 The automatic medical translator recognizes a pre-established set of signs to generate a report with the users' symptoms. The physician will analyze the report and will be able to make the diagnosis and indicate the treatment to follow.
