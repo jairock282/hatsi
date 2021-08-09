@@ -6,3 +6,4 @@ pandas >= 1.2.4
 keras-nightly >= 2.7.0.dev2021062600
 scikit-learn >= 0.24.2
 tf-nightly >= 2.7.0.dev20210803
+imutils >= 0.5.4
