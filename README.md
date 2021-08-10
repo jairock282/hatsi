@@ -23,7 +23,7 @@ pip install -r requirements.txt
 ```
 ---
 ### Usage :video_game:
-Download the pre-trained model from https://drive.google.com/file/d/1Tf9y-uDrDdjj8IE2839PzHxtzGv0Dxhv/view?usp=sharing and put it into the `codes directory`
+Download the pre-trained model from https://drive.google.com/file/d/1Tf9y-uDrDdjj8IE2839PzHxtzGv0Dxhv/view?usp=sharing and put it into the `codes/` directory
 
 There are multiple code files:
 - `oakD.py` contains all the configuration process to setup the oakD camera
