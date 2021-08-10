@@ -42,7 +42,7 @@ predicciones = [] ##List of all predictions attempts
 ## -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## ---------------------------------------------------------- Load Model --------------------------------------------------------------------------------
-rutaModelo = r'C:\Users\khmap\depthai-python\Ejemplos_Python\En_Enf_500_1.h5' ##Path to the pre-trained model weights
+rutaModelo = r'En_Enf_500_1.h5' ##Path to the pre-trained model weights
 model = Sequential()
 model.add(LSTM(2450, return_sequences=True, activation='relu', input_shape=(15, 201))) ##Input layer
 model.add(LSTM(128, return_sequences=True, activation='relu')) ##Hidden layers
@@ -56,7 +56,7 @@ model.load_weights(rutaModelo)
 ## ---------------------------------------------------------- Predictions --------------------------------------------------------------------------------
 video_path = ''
 ##list of symptoms['Diarrhea', 'headache', 'Body pain', 'Fatigue', 'Fever', 'No sign', 'Cough']
-phrases=np.array(['Diarrea','Dolor_cabeza','Dolor_cuerpo','Fatiga','Fiebre','Sin_Sena','Tos'])
+phrases=np.array(['Diarrea','Dolor_Cabeza','Dolor_Cuerpo','Fatiga','Fiebre','Sin_Sena','Tos'])
 respuestas = [] ##List of all the correct predictions
 ## -----------------------------------------------------------------------------------------------------------------------------------------------------
 
@@ -187,13 +187,8 @@ def leerVideo ():
 
     ##Searches the video to show
     if len(video_path) > 0:
-        lblInfoVideoPath.configure(text = video_path) ## Defines video's name
         cap = cv2.VideoCapture(video_path) ##Read the video with OpenCV
         visualizar() ##Shows the video
-    else:
-        ##If there isn't a video to show
-        lblInfoVideoPath.configure(text="Video no seleccionado")
-
 
 ##Loops the process to defines the video message to show
 def Repetir():
@@ -229,7 +224,7 @@ def vBienvenida():
     moda = -1
     respuestas = []
 
-    video_path = r'C:\Users\khmap\Videos\Videos LSM\Nuevos\Bienvenida.mp4' ##Path to the welcome video
+    video_path = r'videos/Bienvenida.mp4' ##Path to the welcome video
     leerVideo() ##Shows the video message
 
 ##Gets the video to process
@@ -380,7 +375,7 @@ def verificarSena():
     btnConfirmarSena.grid(column=0, row=6, padx=5, pady=5, columnspan=2) ##The sign is correct
     btnDeclinarSena.grid(column=1, row=6, padx=5, pady=5, columnspan=2) ##The sign isn't correct
 
-    video_path = r'C:\Users\khmap\Videos\Videos LSM\Nuevos\\'+phrases[moda]+'.mp4' ##Defines the video message to show
+    video_path = r'videos/'+phrases[moda]+'.mp4' ##Defines the video message to show
     leerVideo() ##Shows video message
 
 ##Aks if the user wanst to translate other sign
@@ -400,7 +395,7 @@ def GuardarOtraSena():
     btnSiOtraSena.grid(column=0, row=6, padx=5, pady=5, columnspan=2)# si quiero guardar otra seña video_entrada
     btnNoOtraSena.grid(column=1, row=6, padx=5, pady=5, columnspan=2)# Finalizar
 
-    video_path = r'C:\Users\khmap\Videos\Videos LSM\Nuevos\Traducir_Otra.mp4'
+    video_path = r'videos/Traducir_Otra.mp4'
     leerVideo() ##Shows video message
 
 ##Exit message
@@ -413,7 +408,7 @@ def vDespedida ():
     btnSiOtraSena.grid_forget()
     btnNoOtraSena.grid_forget()
     btnVolverIniciar.grid(column=0, row=1, padx=2, pady=5, columnspan=2)
-    video_path= r'C:\Users\khmap\Videos\Videos LSM\Nuevos\Despedida.mp4' ##Exist video message path
+    video_path= r'videos/Despedida.mp4' ##Exist video message path
     leerVideo() ##shows video message
 
     print("Resultados",respuestas)
@@ -434,17 +429,8 @@ btnComenzar = tk.Button(ventana, text ="Start", state= tk.NORMAL, command = vide
 btnComenzar.grid(column = 0, row = 1, padx = 2, pady = 5, columnspan = 2) ##Position
 
 #btnRepetirV = tk.Button(ventana, text ="Repetir instruccion", state= tk.NORMAL, command = Repetir) ##Spanish
-btnRepetirV = tk.Button(ventana, text ="Repeat instruccion", state= tk.NORMAL, command = Repetir) ##English
+btnRepetirV = tk.Button(ventana, text ="Repeat instruction", state= tk.NORMAL, command = Repetir) ##English
 btnRepetirV.grid(column = 0, row = 2, padx = 2, pady = 5, columnspan = 2)
-
-## ----------------------------------------- Path to the video file -----------------------------------------------------
-#lblInfo1 = tk.Label(ventana, text="Lectura de archivo") # Mensaje en la ventana
-#lblInfo1.grid(column = 0, row = 3)# Posicion en la ventana
-## ----------------------------------------------------------------------------------------------------------------------
-
-#lblInfoVideoPath = tk.Label(ventana, text="Video no seleccionado") ##Spanish
-lblInfoVideoPath = tk.Label(ventana, text="Video wasn't selected") ##English
-lblInfoVideoPath.grid(column = 1, row = 3) ##Position
 
 lblVideo = tk.Label(ventana) ##Video space
 lblVideo.grid(column = 0, row = 5, columnspan = 2) ##Position
