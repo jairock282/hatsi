@@ -23,6 +23,8 @@ pip install -r requirements.txt
 ```
 ---
 ### Usage :video_game:
+Download the pre-trained model from https://drive.google.com/file/d/1Tf9y-uDrDdjj8IE2839PzHxtzGv0Dxhv/view?usp=sharing and put it into the `codes/` directory
+
 There are multiple code files:
 - `oakD.py` contains all the configuration process to setup the oakD camera
 - `bodyPointsDetector.py` gets all the X,Y and Z values in meters of each keypoint
@@ -30,6 +32,19 @@ There are multiple code files:
 - `cleanData.py` cleans the dataframes with different operations 
 - `modelTraining.py` trains the LSTM model with the sliding windows of 15 frames
 
+#### Directories
+```
+hatsi/
+└─ codes/
+    ├─ videos/
+    |   └── ...
+    ├─ oakD.py
+    ├─ bodyPointsDetector.py
+    ├─ signCapture.py
+    ├─ cleanData.py
+    ├─ modelTrining.py
+    └─ En_Enf_500_1.h5
+```
 #### Run an example
 `python3 realTimeDemo.py`
 
