@@ -29,6 +29,7 @@ calibrar = False ##Init calibration process
 distPecho = 0 ##Distance of the chest
 PCuerpoZ2 = []
 PCuerpoX2 = []
+oak = oakD.oakD() ##Creates the oakD object with all the neccesary configuration to use the camera
 ## -----------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## ----------------------------- Flags for the acquisition of the frames for the prediction process(sliding window of 15 frames) -----------------------
@@ -264,7 +265,6 @@ def video_entrada():
     predicciones = []
     ############################
 
-    oak = oakD.oakD() ##Creates the oakD object with all the neccesary configuration to use the camera
     with dai.Device(oak.pipeline) as device:
         device.startPipeline() ##Inits the OakD pipeline
         colorQueue = device.getOutputQueue(name="color", maxSize=4, blocking=False)  ##Queue with the RGB frames
